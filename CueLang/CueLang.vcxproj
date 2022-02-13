@@ -157,6 +157,9 @@
     <ClInclude Include="include\CUESDK.h" />
     <ClInclude Include="include\CUESDKGlobal.h" />
   </ItemGroup>
+  <ItemGroup>
+    <Library Include="CUESDK_2019.lib" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

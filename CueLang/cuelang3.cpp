@@ -146,8 +146,8 @@ const char* toString(CorsairError error)
 
 void getAllLeds()
 {
-    for (auto deviceIndex = 0; deviceIndex < CorsairGetDeviceCount(); deviceIndex++) {
-        if (const auto ledPositions = CorsairGetLedPositionsByDeviceIndex(deviceIndex)) {
+    if (CorsairGetDeviceCount() > 0) {
+        if (const auto ledPositions = CorsairGetLedPositionsByDeviceIndex(0)) {
             for (auto i = 0; i < ledPositions->numberOfLed; i++) {
                 const auto ledId = ledPositions->pLedPosition[i].ledId;
                 leds1.push_back(CorsairLedColor{ ledId, en_r, en_g, en_b });
